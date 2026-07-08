@@ -165,6 +165,7 @@ Em resumo, aprendemos que o Model Context Protocol (MCP) funciona como um conect
 Ele transforma os LLMs de meros geradores de texto em agentes ativos, permitindo que executem ações reais (através de Tools), consumam dados automaticamente (através de Resources) e padronizem comandos rotineiros (através de Prompts).
 
 Sustentado por uma arquitetura clara de Hosts, Clients e Servers, o MCP elimina a necessidade de integrações exaustivas de API e acaba com o trabalho manual de "copiar e colar" contexto, criando um padrão simples, direto e poderoso para o futuro das aplicações com IA.
+
 ---
 
 ## Prompt 2
@@ -338,16 +339,16 @@ Ao final do estudo foi possível:
 
 | Conceito | Definição |
 |-----------|-----------|
-| Host | |
-| Client | |
-| Server | |
-| Tool | |
-| Resource | |
-| JSON-RPC | |
-| Session | |
-| Capability | |
-| Context | |
-| Sampling | |
+| **Host** | Aplicação que hospeda a interação com o usuário e coordena a comunicação entre o modelo de IA e os servidores MCP. É responsável por iniciar e gerenciar as conexões. |
+| **Client** | Componente implementado pelo Host que estabelece a conexão com um servidor MCP, envia requisições e recebe respostas seguindo a especificação do protocolo. |
+| **Server** | Serviço que expõe ferramentas, recursos e prompts por meio do protocolo MCP, permitindo que aplicações de IA acessem funcionalidades externas de forma padronizada. |
+| **Tool** | Função ou ação disponibilizada por um servidor MCP que pode ser executada por um modelo de IA, como consultar uma API, acessar um banco de dados ou realizar cálculos. |
+| **Resource** | Informação disponibilizada pelo servidor para consulta, como arquivos, documentos, registros ou qualquer outro dado que possa ser utilizado pelo modelo. |
+| **JSON-RPC** | Protocolo leve de chamada de procedimentos remotos utilizado pelo MCP para padronizar a troca de mensagens entre clientes e servidores. |
+| **Session** | Contexto de comunicação estabelecido entre o cliente e o servidor durante uma conexão MCP, mantendo o estado necessário para as interações. |
+| **Capability** | Conjunto de funcionalidades que um cliente ou servidor informa suportar durante a negociação inicial da conexão, permitindo compatibilidade entre as partes. |
+| **Context** | Conjunto de informações disponíveis para o modelo durante uma interação, incluindo recursos, ferramentas, histórico e demais dados necessários para executar uma tarefa. |
+| **Sampling** | Mecanismo pelo qual um servidor pode solicitar ao Host que utilize um modelo de linguagem para gerar uma resposta, mantendo o controle do modelo e da interação no lado do cliente. |
 
 ---
 
