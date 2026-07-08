@@ -5,21 +5,9 @@
 ![MCP](https://img.shields.io/badge/Model%20Context%20Protocol-Estudo-blue)
 ![DIO](https://img.shields.io/badge/DIO-Desafio-purple)
 
-graph TD
-    A([Usuário]) --> B[Aplicação Host]
-    B --> C[MCP Client]
-    C -- JSON-RPC --> D[MCP Server]
-    D --> E[Tools]
-    D --> F[Resources]
-    D --> G[Prompts]
-    
-    style A fill:#f9f9f9,stroke:#333,stroke-width:2px
-    style B fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
-    style C fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
-    style D fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    style E fill:#fff3e0,stroke:#ef6c00,stroke-width:1px
-    style F fill:#fff3e0,stroke:#ef6c00,stroke-width:1px
-    style G fill:#fff3e0,stroke:#ef6c00,stroke-width:1px
+<p align="center">
+  <img src="./assets/images/mcp-architecture.png" alt="Arquitetura do MCP" width="800">
+</p>
 
 > Projeto desenvolvido como parte do desafio da DIO, utilizando o NotebookLM como ferramenta de aprendizagem ativa para estudar o **Model Context Protocol (MCP)** por meio da curadoria de fontes, engenharia de prompts e organização do conhecimento.
 
